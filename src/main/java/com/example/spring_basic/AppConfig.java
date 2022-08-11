@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 // 객체 주입을 여기서 다 하자! service 클래스에서는 service 하는것만 집중하도록!
 @Configuration
 public class AppConfig {
-    // 이렇게 빼주면 AppConfig에서 모든 역할이 다 드러나게 된다.
+
     @Bean
     public static MemberRepository getMemberRepository() {
         return new MemoryMemberRepository();
