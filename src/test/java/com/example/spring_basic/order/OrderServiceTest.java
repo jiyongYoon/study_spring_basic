@@ -8,6 +8,8 @@ import com.example.spring_basic.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 class OrderServiceTest {
     MemberService memberService;
@@ -31,5 +33,13 @@ class OrderServiceTest {
         //then
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
         Assertions.assertThat(order.calculatePrice()).isEqualTo(10000-1000);
+    }
+
+    @Test
+    void configuration() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        AppConfig appConfigBean = ac.getBean(AppConfig.class);
+        System.out.println("appConfigBean = " + appConfigBean);
     }
 }
