@@ -6,7 +6,10 @@ import com.example.spring_basic.discount.RateDiscountPolicy;
 import com.example.spring_basic.member.Member;
 import com.example.spring_basic.member.MemberRepository;
 import com.example.spring_basic.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
@@ -14,6 +17,7 @@ public class OrderServiceImpl implements OrderService {
     // 할인정책이 바뀌는데 OrderServiceImpl의 코드를 바꿔야 하는게 마땅한가?
 //     private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     private final DiscountPolicy discountPolicy;
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
