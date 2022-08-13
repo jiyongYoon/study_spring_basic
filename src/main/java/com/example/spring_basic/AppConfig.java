@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 객체 주입을 여기서 다 하자! service 클래스에서는 service 하는것만 집중하도록!
-@Configuration
+//@Configuration
 public class AppConfig {
 
     @Bean

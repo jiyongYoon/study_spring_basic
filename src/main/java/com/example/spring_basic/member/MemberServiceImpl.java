@@ -2,9 +2,10 @@ package com.example.spring_basic.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 // 인터페이스에 대한 구현체가 하나만 있을 경우 뒤에 Impl이라고 보통 붙인다. (컨벤션)
-@Component
+@Service
 public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 

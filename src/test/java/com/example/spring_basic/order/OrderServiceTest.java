@@ -1,6 +1,8 @@
 package com.example.spring_basic.order;
 
 import com.example.spring_basic.AppConfig;
+import com.example.spring_basic.AutoAppConfig;
+import com.example.spring_basic.discount.DiscountPolicy;
 import com.example.spring_basic.member.Grade;
 import com.example.spring_basic.member.Member;
 import com.example.spring_basic.member.MemberService;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 class OrderServiceTest {
     MemberService memberService;
